@@ -1,3 +1,5 @@
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 
 export default function Page() {
@@ -32,8 +34,9 @@ export default function Page() {
           </div>
 
           <div className='mt-8'>
-            <button className="px-6 py-2 bg-amber-600 text-white rounded-lg shadow-md hover:bg-amber-700 transition duration-300">
+            <button className="px-6 py-3 flex bg-amber-600 text-white rounded-lg shadow-md hover:bg-amber-700 transition duration-300">
               Let's Talk
+              <FontAwesomeIcon icon={faThumbsUp} className='w-6 h-6 animate-bounce ml-2'  />
             </button>
           </div>
 
