@@ -1,57 +1,266 @@
-import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Image from 'next/image';
+import { faPlay, faCube, faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { FCIBold } from "./fonts";
+import { faFacebook, faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 export default function Page() {
   return (
-    <main className="flex flex-col h-screen mx-[10%] item py-10 justify-between">
-      <nav className="flex justify-between">
-        <a>logo</a>
+    <main className="mx-auto my-10 max-w-7xl">
+      {/* Navbar */}
+      <nav className="flex justify-between sticky top-10">
+        <a href="/">
+          <FontAwesomeIcon icon={faCube} className="w-6 h-6" />
+        </a>
 
         <div className="flex space-x-4">
-          <div>icon?</div>
-          <div>hamberker</div>
+          <a>Portfolio</a>
+          <a href="#">
+            <FontAwesomeIcon icon={faBars} className="w-6 h-6" />
+          </a>
         </div>
       </nav>
 
-      <section>
-        <div>
-          <h1 className="font-semibold text-2xl">Hi, my name is</h1>
-          <h1 className="font-semibold text-8xl pb-8">Suparoek Manajit</h1>
-          <h1 className="font-bold text-4xl pb-8">Software Developer</h1>
-          <h1 className="font-bold text-4xl pb-8">Programmer</h1>
+      {/* ABOUT ME */}
+      <main className="flex h-screen justify-between">
+        <div className="flex flex-col justify-center">
+          <div>
+            <h1 className="font-semibold text-2xl mb-2 text-[#FF0000]">
+              Hi, my name is
+            </h1>
+            <h1 className="font-semibold text-7xl">Suparoek Manajit</h1>
+            <h1 className="font-bold text-3xl my-6 text-[#aaaa] ">
+              Software Developer
+            </h1>
 
-          <div className="flex space-x-2">
-            <Image src="/html.png" alt="hero" width={30} height={30} />
-            <Image src="/css.png" alt="hero" width={30} height={30} />
-            <Image src="/js.png" alt="hero" width={30} height={30} />
-            <Image src="/python.png" alt="hero" width={30} height={30} />
-            <Image src="/database.png" alt="hero" width={30} height={30} />
-            <Image src="/c.png" alt="hero" width={30} height={30} />
-            <Image src="/docker.png" alt="hero" width={30} height={30} />
-            <Image src="/git.png" alt="hero" width={30} height={30} />
-            <Image src="/figma.png" alt="hero" width={30} height={30} />
+            <div className="flex ml-2 space-x-4">
+              <a href="#" target="_blank">
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  className="w-6 h-6 hover:text-[#FF0000]"
+                />
+              </a>
+
+              <a href="#" target="_blank">
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  className="w-6 h-6 hover:text-[#FF0000]"
+                />
+              </a>
+
+              <a href="#" target="_blank">
+                <FontAwesomeIcon
+                  icon={faFacebook}
+                  className="w-6 h-6 hover:text-[#FF0000]"
+                />
+              </a>
+
+              <a href="#" target="_blank">
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  className="w-6 h-6 hover:text-[#FF0000]"
+                />
+              </a>
+            </div>
+
+            <div className="mt-8">
+              <a href="/resume.pdf" target="_blank" className="animate-pulse">
+                <span className="px-5 py-3 inline-flex border-1 items-center border-[#FF0000]  rounded-lg shadow-md transition duration-1000 bg-transparent hover:bg-[#FF0000]">
+                  View Resume
+                  <FontAwesomeIcon
+                    icon={faPlay}
+                    className="w-6 h-6 animate-pulse ml-3"
+                  />
+                </span>
+              </a>
+            </div>
           </div>
-
-          <div className='mt-8'>
-            <button className="px-6 py-3 flex bg-amber-600 text-white rounded-lg shadow-md hover:bg-amber-700 transition duration-300">
-              Let's Talk
-              <FontAwesomeIcon icon={faThumbsUp} className='w-6 h-6 animate-bounce ml-2'  />
-            </button>
-          </div>
-
         </div>
-      </section>
 
-      <footer>
+        <div className="flex items-end justify-end">
+          <img
+            src="/rocket2.png"
+            className="rounded-lg shadow-lg w-80 h-auto"
+          />
+        </div>
+      </main>
+
+      {/* PASSION */}
+      <main className="flex h-screen items-center justify-center">
+        <div className="inline-block">
+          <h1
+            className={`${FCIBold.className} font-bold text-7xl text-center max-w-6xl`}
+          >
+            I'm passionate about software development and aim to improve my
+            skills. I create efficient applications that solve problems and meet
+            user needs.
+          </h1>
+        </div>
+      </main>
+
+      {/* SKILLS */}
+      <main className="grid grid-cols-[80%_40%] h-screen justify-between">
+        <div>
+          <h1 className="font-semibold text-sm mb-2 text-[#aaaa]">SKILLS</h1>
+          <h1 className="font-semibold text-3xl text-[#FF0000]">My Skills</h1>
+          <h1 className="font-bold text-2xl mt-6 w-[80%]">
+            I like to take responsibility to craft aesthetic user experience
+            using modern frontend architecture.
+          </h1>
+
+          <h1 className="mt-10 text-[#aaaa]">Languages & Tools</h1>
+          <div className="flex space-x-4 mt-2 p-2 items-center">
+            <img src="/html.png" className="w-10 h-10" />
+            <img src="/css.png" className="w-10 h-10" />
+            <img src="/js.png" className="w-10 h-10" />
+            <img
+              src="/nodejs.png"
+              className="w-10 h-10 p-0.5 bg-gray-200 rounded-full"
+            />
+            <img src="/python.png" className="w-10 h-10" />
+            <img src="/c.png" className="w-12 h-12" />
+            <img src="/c-plus.png" className="w-10 h-10" />
+            <img src="/c-sharp.png" className="w-10 h-10" />
+            <img src="/firebase.png" className="w-10 h-10" />
+            <img src="/dart.png" className="w-10 h-10" />
+            <img src="/java.png" className="w-10 h-10" />
+          </div>
+
+          <h1 className="mt-6 text-[#aaaa]">Frameworks & Libraries</h1>
+          <div className="flex space-x-4 mt-2 p-2 items-center">
+            <img src="/react.png" className="w-10 h-10" />
+            <img src="/tailwindcss.png" className="w-10 h-10" />
+            <img src="/vite.png" className="w-10 h-10" />
+            <img src="/nextjs.png" className="w-10 h-10" />
+            <img src="/flutter.png" className="w-10 h-10" />
+          </div>
+
+          <div className="grid-cols-2 inline-grid">
+            <div>
+              <h1 className="mt-6 text-[#aaaa]">Databases</h1>
+              <div className="flex space-x-4 mt-2 p-2 items-center">
+                <img
+                  src="/oracle.png"
+                  className="w-10 h-10 p-0.5 bg-gray-200 rounded-full"
+                />
+                <img src="/postgresql.png" className="w-10 h-10" />
+                <img src="/mongodb.png" className="w-10 h-10" />
+              </div>
+            </div>
+
+            <div>
+              <h1 className="mt-6 text-[#aaaa]">Others</h1>
+              <div className="flex space-x-4 mt-2 p-2 items-center">
+                <img src="/docker.png" className="w-10 h-10" />
+                <img src="/git.png" className="w-10 h-10" />
+                <img src="/figma.png" className="w-10 h-10" />
+                <img src="/canva.png" className="w-10 h-10" />
+                <img src="/microsoft-office.png" className="w-10 h-10" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-start justify-center">
+          <img
+            src="/planet.png"
+            className="rounded-lg shadow-lg w-100 h-auto"
+          />
+        </div>
+      </main>
+
+      {/* Attention */}
+      <main className="flex h-screen items-center justify-center">
+        <div className="inline-block">
+          <h1
+            className={`${FCIBold.className} font-bold text-7xl text-center max-w-6xl`}
+          >
+            I have a strong obsession for attention to detail.
+          </h1>
+        </div>
+      </main>
+
+      {/* PROJECTS */}
+      <main className="grid grid-cols-[80%_40%] h-auto mb-[20%] justify-between">
+        <div>
+          <h1 className="font-semibold text-sm mb-2 text-[#aaaa]">PROJECTS</h1>
+          <h1 className="font-semibold text-3xl text-[#FF0000]">My Projects</h1>
+          <h1 className="font-bold text-2xl mt-6 w-[80%]">
+            I have worked on several projects that have helped me to improve my
+            skills and knowledge.
+          </h1>
+
+          <div className="flex flex-col space-y-4 mt-10">
+            <div className="flex space-x-4 items-center">
+              <img src="#" className="w-32 h-32 rounded-lg" />
+              <div>
+                <h1 className="font-bold text-2xl">Project 1</h1>
+                <p className="text-[#aaaa]">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex space-x-4 items-center">
+              <img src="#" className="w-32 h-32 rounded-lg" />
+              <div>
+                <h1 className="font-bold text-2xl">Project 2</h1>
+                <p className="text-[#aaaa]">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex space-x-4 items-center">
+              <img src="#" className="w-32 h-32 rounded-lg" />
+              <div>
+                <h1 className="font-bold text-2xl">Project 3</h1>
+                <p className="text-[#aaaa]">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex space-x-4 items-center">
+              <img src="#" className="w-32 h-32 rounded-lg" />
+              <div>
+                <h1 className="font-bold text-2xl">Project 4</h1>
+                <p className="text-[#aaaa]">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      {/* CONTACT */}
+      <main className="grid grid-cols-[80%_40%] h-screen justify-between">
+        <div>
+          <h1 className="font-semibold text-sm mb-2 text-[#aaaa]">CONTACT</h1>
+          <h1 className="font-semibold text-3xl text-[#FF0000]">Contact Me</h1>
+          <h1 className="font-bold text-2xl mt-6 w-[80%]">
+            I am open to new opportunities and collaborations. Feel free to
+            contact me.
+          </h1>
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="mt-10">
         <p>&copy; 2023 Suparoek Manajit. All rights reserved.</p>
         <div className="flex space-x-4 mt-2">
-          <a href="#" className="hover:text-amber-600 transition duration-300">Facebook</a>
-          <a href="#" className="hover:text-amber-600 transition duration-300">Twitter</a>
-          <a href="#" className="hover:text-amber-600 transition duration-300">LinkedIn</a>
+          <a href="#" className="hover:text-amber-600 transition duration-300">
+            Facebook
+          </a>
+          <a href="#" className="hover:text-amber-600 transition duration-300">
+            Twitter
+          </a>
+          <a href="#" className="hover:text-amber-600 transition duration-300">
+            LinkedIn
+          </a>
         </div>
       </footer>
-
     </main>
   );
 }
