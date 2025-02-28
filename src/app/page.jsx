@@ -235,7 +235,7 @@ export default function Page() {
       </main>
 
       {/* CONTACT */}
-      <main className="grid grid-cols-[80%_40%] h-screen justify-between">
+      <main className="flex flex-cols h-screen justify-between">
         <div>
           <h1 className="font-semibold text-sm mb-2 text-[#aaaa]">CONTACT</h1>
           <h1 className="font-semibold text-3xl text-[#FF0000]">Contact Me</h1>
@@ -243,11 +243,45 @@ export default function Page() {
             I am open to new opportunities and collaborations. Feel free to
             contact me.
           </h1>
+          <form className="mt-8 space-y-4 w-[50%]">
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Name</label>
+              <input
+                type="text"
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#FF0000] focus:border-[#FF0000] sm:text-sm"
+                placeholder="Your Name"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Email</label>
+              <input
+                type="email"
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#FF0000] focus:border-[#FF0000] sm:text-sm"
+                placeholder="Your Email"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Message</label>
+              <textarea
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#FF0000] focus:border-[#FF0000] sm:text-sm"
+                rows="4"
+                placeholder="Your Message"
+              ></textarea>
+            </div>
+            <div>
+              <button
+                type="submit"
+                className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-[#FF0000] hover:bg-[#e60000] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF0000]"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
         </div>
       </main>
 
       {/* Footer */}
-      <footer className="mt-10">
+      <footer className="flex flex-col mt-10 items-center justify-center">
         <p>&copy; 2023 Suparoek Manajit. All rights reserved.</p>
         <div className="flex space-x-4 mt-2">
           <a href="#" className="hover:text-amber-600 transition duration-300">
