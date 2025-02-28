@@ -6,7 +6,7 @@ import { faFacebook, faGithub, faInstagram } from "@fortawesome/free-brands-svg-
 
 export default function Page() {
   return (
-    <main className="mx-auto my-10 max-w-7xl">
+    <main className="mx-auto my-10 max-w-7xl px-2 sm:px-4 md:px-6 lg:px-8">
       {/* Navbar */}
       <nav className="flex justify-between sticky top-10">
         <a href="/">
@@ -22,14 +22,14 @@ export default function Page() {
       </nav>
 
       {/* ABOUT ME */}
-      <main className="flex h-screen justify-between">
+      <main className="flex flex-col lg:flex-row h-screen justify-between">
         <div className="flex flex-col justify-center">
           <div>
-            <h1 className="font-semibold text-2xl mb-2 text-[#FF0000]">
+            <h1 className="font-semibold text-xl sm:text-2xl mb-2 text-[#FF0000]">
               Hi, my name is
             </h1>
-            <h1 className="font-semibold text-7xl">Suparoek Manajit</h1>
-            <h1 className="font-bold text-3xl my-6 text-[#aaaa] ">
+            <h1 className="font-semibold text-3xl sm:text-4xl lg:text-7xl">Suparoek Manajit</h1>
+            <h1 className="font-bold text-lg sm:text-xl lg:text-3xl my-6 text-[#aaaa] ">
               Software Developer
             </h1>
 
@@ -65,7 +65,7 @@ export default function Page() {
 
             <div className="mt-8">
               <a href="/resume.pdf" target="_blank" className="animate-pulse">
-                <span className="px-5 py-3 inline-flex border-1 items-center border-[#FF0000]  rounded-lg shadow-md transition duration-1000 bg-transparent hover:bg-[#FF0000]">
+                <span className="px-4 py-2 sm:px-5 sm:py-3 inline-flex border-1 items-center border-[#FF0000]  rounded-lg shadow-md transition duration-1000 bg-transparent hover:bg-[#FF0000]">
                   View Resume
                   <FontAwesomeIcon
                     icon={faPlay}
@@ -77,19 +77,19 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="flex items-end justify-end">
+        <div className="flex items-end justify-end mt-10 lg:mt-0">
           <img
             src="/rocket2.png"
-            className="rounded-lg shadow-lg w-80 h-auto"
+            className="rounded-lg shadow-lg w-32 sm:w-40 md:w-60 lg:w-80 h-auto"
           />
         </div>
       </main>
 
       {/* PASSION */}
-      <main className="flex h-screen items-center justify-center">
+      <main className="flex h-screen items-center justify-center px-2 sm:px-4 md:px-6 lg:px-8">
         <div className="inline-block">
           <h1
-            className={`${FCIBold.className} font-bold text-7xl text-center max-w-6xl`}
+            className={`${FCIBold.className} font-bold text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-center max-w-6xl`}
           >
             I'm passionate about software development and aim to improve my
             skills. I create efficient applications that solve problems and meet
@@ -99,81 +99,81 @@ export default function Page() {
       </main>
 
       {/* SKILLS */}
-      <main className="grid grid-cols-[80%_40%] h-screen justify-between">
+      <main className="grid grid-cols-1 lg:grid-cols-[80%_40%] h-screen justify-between px-2 sm:px-4 md:px-6 lg:px-8">
         <div>
           <h1 className="font-semibold text-sm mb-2 text-[#aaaa]">SKILLS</h1>
           <h1 className="font-semibold text-3xl text-[#FF0000]">My Skills</h1>
-          <h1 className="font-bold text-2xl mt-6 w-[80%]">
+          <h1 className="font-bold text-xl sm:text-2xl mt-6 w-[80%]">
             I like to take responsibility to craft aesthetic user experience
             using modern frontend architecture.
           </h1>
 
           <h1 className="mt-10 text-[#aaaa]">Languages & Tools</h1>
-          <div className="flex space-x-4 mt-2 p-2 items-center">
-            <img src="/html.png" className="w-10 h-10" />
-            <img src="/css.png" className="w-10 h-10" />
-            <img src="/js.png" className="w-10 h-10" />
+          <div className="flex flex-wrap space-x-4 mt-2 p-2 items-center">
+            <img src="/html.png" className="w-8 sm:w-10 h-8 sm:h-10" />
+            <img src="/css.png" className="w-8 sm:w-10 h-8 sm:h-10" />
+            <img src="/js.png" className="w-8 sm:w-10 h-8 sm:h-10" />
             <img
               src="/nodejs.png"
-              className="w-10 h-10 p-0.5 bg-gray-200 rounded-full"
+              className="w-8 sm:w-10 h-8 sm:h-10 p-0.5 bg-gray-200 rounded-full"
             />
-            <img src="/python.png" className="w-10 h-10" />
-            <img src="/c.png" className="w-12 h-12" />
-            <img src="/c-plus.png" className="w-10 h-10" />
-            <img src="/c-sharp.png" className="w-10 h-10" />
-            <img src="/firebase.png" className="w-10 h-10" />
-            <img src="/dart.png" className="w-10 h-10" />
-            <img src="/java.png" className="w-10 h-10" />
+            <img src="/python.png" className="w-8 sm:w-10 h-8 sm:h-10" />
+            <img src="/c.png" className="w-10 sm:w-12 h-10 sm:h-12" />
+            <img src="/c-plus.png" className="w-8 sm:w-10 h-8 sm:h-10" />
+            <img src="/c-sharp.png" className="w-8 sm:w-10 h-8 sm:h-10" />
+            <img src="/firebase.png" className="w-8 sm:w-10 h-8 sm:h-10" />
+            <img src="/dart.png" className="w-8 sm:w-10 h-8 sm:h-10" />
+            <img src="/java.png" className="w-8 sm:w-10 h-8 sm:h-10" />
           </div>
 
           <h1 className="mt-6 text-[#aaaa]">Frameworks & Libraries</h1>
-          <div className="flex space-x-4 mt-2 p-2 items-center">
-            <img src="/react.png" className="w-10 h-10" />
-            <img src="/tailwindcss.png" className="w-10 h-10" />
-            <img src="/vite.png" className="w-10 h-10" />
-            <img src="/nextjs.png" className="w-10 h-10" />
-            <img src="/flutter.png" className="w-10 h-10" />
+          <div className="flex flex-wrap space-x-4 mt-2 p-2 items-center">
+            <img src="/react.png" className="w-8 sm:w-10 h-8 sm:h-10" />
+            <img src="/tailwindcss.png" className="w-8 sm:w-10 h-8 sm:h-10" />
+            <img src="/vite.png" className="w-8 sm:w-10 h-8 sm:h-10" />
+            <img src="/nextjs.png" className="w-8 sm:w-10 h-8 sm:h-10" />
+            <img src="/flutter.png" className="w-8 sm:w-10 h-8 sm:h-10" />
           </div>
 
           <div className="grid-cols-2 inline-grid">
             <div>
               <h1 className="mt-6 text-[#aaaa]">Databases</h1>
-              <div className="flex space-x-4 mt-2 p-2 items-center">
+              <div className="flex flex-wrap space-x-4 mt-2 p-2 items-center">
                 <img
                   src="/oracle.png"
-                  className="w-10 h-10 p-0.5 bg-gray-200 rounded-full"
+                  className="w-8 sm:w-10 h-8 sm:h-10 p-0.5 bg-gray-200 rounded-full"
                 />
-                <img src="/postgresql.png" className="w-10 h-10" />
-                <img src="/mongodb.png" className="w-10 h-10" />
+                <img src="/postgresql.png" className="w-8 sm:w-10 h-8 sm:h-10" />
+                <img src="/mongodb.png" className="w-8 sm:w-10 h-8 sm:h-10" />
               </div>
             </div>
 
             <div>
               <h1 className="mt-6 text-[#aaaa]">Others</h1>
-              <div className="flex space-x-4 mt-2 p-2 items-center">
-                <img src="/docker.png" className="w-10 h-10" />
-                <img src="/git.png" className="w-10 h-10" />
-                <img src="/figma.png" className="w-10 h-10" />
-                <img src="/canva.png" className="w-10 h-10" />
-                <img src="/microsoft-office.png" className="w-10 h-10" />
+              <div className="flex flex-wrap space-x-4 mt-2 p-2 items-center">
+                <img src="/docker.png" className="w-8 sm:w-10 h-8 sm:h-10" />
+                <img src="/git.png" className="w-8 sm:w-10 h-8 sm:h-10" />
+                <img src="/figma.png" className="w-8 sm:w-10 h-8 sm:h-10" />
+                <img src="/canva.png" className="w-8 sm:w-10 h-8 sm:h-10" />
+                <img src="/microsoft-office.png" className="w-8 sm:w-10 h-8 sm:h-10" />
               </div>
             </div>
           </div>
         </div>
 
-        <div className="flex items-start justify-center">
+        <div className="flex items-start justify-center mt-10 lg:mt-0">
           <img
             src="/planet.png"
-            className="rounded-lg shadow-lg w-100 h-auto"
+            className="rounded-lg shadow-lg w-32 sm:w-40 md:w-60 lg:w-100 h-auto"
           />
         </div>
       </main>
 
       {/* Attention */}
-      <main className="flex h-screen items-center justify-center">
+      <main className="flex h-screen items-center justify-center px-2 sm:px-4 md:px-6 lg:px-8">
         <div className="inline-block">
           <h1
-            className={`${FCIBold.className} font-bold text-7xl text-center max-w-6xl`}
+            className={`${FCIBold.className} font-bold text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-center max-w-6xl`}
           >
             I have a strong obsession for attention to detail.
           </h1>
@@ -181,20 +181,20 @@ export default function Page() {
       </main>
 
       {/* PROJECTS */}
-      <main className="grid grid-cols-[80%_40%] h-auto mb-[20%] justify-between">
+      <main className="grid grid-cols-1 lg:grid-cols-[80%_40%] h-auto mb-[20%] justify-between px-2 sm:px-4 md:px-6 lg:px-8">
         <div>
           <h1 className="font-semibold text-sm mb-2 text-[#aaaa]">PROJECTS</h1>
           <h1 className="font-semibold text-3xl text-[#FF0000]">My Projects</h1>
-          <h1 className="font-bold text-2xl mt-6 w-[80%]">
+          <h1 className="font-bold text-xl sm:text-2xl mt-6 w-[80%]">
             I have worked on several projects that have helped me to improve my
             skills and knowledge.
           </h1>
 
           <div className="flex flex-col space-y-4 mt-10">
             <div className="flex space-x-4 items-center">
-              <img src="#" className="w-32 h-32 rounded-lg" />
+              <img src="#" className="w-16 sm:w-20 md:w-24 lg:w-32 h-16 sm:h-20 md:h-24 lg:h-32 rounded-lg" />
               <div>
-                <h1 className="font-bold text-2xl">Project 1</h1>
+                <h1 className="font-bold text-lg sm:text-xl md:text-2xl">Project 1</h1>
                 <p className="text-[#aaaa]">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
@@ -202,9 +202,9 @@ export default function Page() {
             </div>
 
             <div className="flex space-x-4 items-center">
-              <img src="#" className="w-32 h-32 rounded-lg" />
+              <img src="#" className="w-16 sm:w-20 md:w-24 lg:w-32 h-16 sm:h-20 md:h-24 lg:h-32 rounded-lg" />
               <div>
-                <h1 className="font-bold text-2xl">Project 2</h1>
+                <h1 className="font-bold text-lg sm:text-xl md:text-2xl">Project 2</h1>
                 <p className="text-[#aaaa]">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
@@ -212,9 +212,9 @@ export default function Page() {
             </div>
 
             <div className="flex space-x-4 items-center">
-              <img src="#" className="w-32 h-32 rounded-lg" />
+              <img src="#" className="w-16 sm:w-20 md:w-24 lg:w-32 h-16 sm:h-20 md:h-24 lg:h-32 rounded-lg" />
               <div>
-                <h1 className="font-bold text-2xl">Project 3</h1>
+                <h1 className="font-bold text-lg sm:text-xl md:text-2xl">Project 3</h1>
                 <p className="text-[#aaaa]">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
@@ -222,9 +222,9 @@ export default function Page() {
             </div>
 
             <div className="flex space-x-4 items-center">
-              <img src="#" className="w-32 h-32 rounded-lg" />
+              <img src="#" className="w-16 sm:w-20 md:w-24 lg:w-32 h-16 sm:h-20 md:h-24 lg:h-32 rounded-lg" />
               <div>
-                <h1 className="font-bold text-2xl">Project 4</h1>
+                <h1 className="font-bold text-lg sm:text-xl md:text-2xl">Project 4</h1>
                 <p className="text-[#aaaa]">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
@@ -235,15 +235,15 @@ export default function Page() {
       </main>
 
       {/* CONTACT */}
-      <main className="flex flex-cols h-screen justify-between">
+      <main className="flex flex-col lg:flex-row h-screen justify-between px-2 sm:px-4 md:px-6 lg:px-8">
         <div>
           <h1 className="font-semibold text-sm mb-2 text-[#aaaa]">CONTACT</h1>
           <h1 className="font-semibold text-3xl text-[#FF0000]">Contact Me</h1>
-          <h1 className="font-bold text-2xl mt-6 w-[80%]">
+          <h1 className="font-bold text-xl sm:text-2xl mt-6 w-[80%]">
             I am open to new opportunities and collaborations. Feel free to
             contact me.
           </h1>
-          <form className="mt-8 space-y-4 w-[50%]">
+          <form className="mt-8 space-y-4 w-full lg:w-[50%]">
             <div>
               <label className="block text-sm font-medium text-gray-700">Name</label>
               <input
@@ -281,7 +281,7 @@ export default function Page() {
       </main>
 
       {/* Footer */}
-      <footer className="flex flex-col mt-10 items-center justify-center">
+      <footer className="flex flex-col mt-10 items-center justify-center px-2 sm:px-4 md:px-6 lg:px-8">
         <p>&copy; 2023 Suparoek Manajit. All rights reserved.</p>
         <div className="flex space-x-4 mt-2">
           <a href="#" className="hover:text-amber-600 transition duration-300">
