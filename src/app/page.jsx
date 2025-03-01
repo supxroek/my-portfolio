@@ -102,7 +102,7 @@ export default function Page() {
 
       {/* SKILLS */}
       <section className="grid h-screen-auto">
-        <div className="grid sm:grid-cols-[80%_40%] sm:justify-between">
+        <div className="grid sm:grid-cols-[70%_30%] sm:max-w-full sm:justify-between">
           <div className="grid">
             <h1 className="font-semibold text-sm mb-2 text-[#aaaa]">SKILLS</h1>
             <h1 className="font-semibold text-2xl text-[#FF0000] sm:text-4xl">
