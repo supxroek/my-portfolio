@@ -6,7 +6,7 @@ import { faFacebook, faGithub, faInstagram } from "@fortawesome/free-brands-svg-
 
 export default function Page() {
   return (
-    <main className="mx-auto my-10 px-4">
+    <main className="mx-[8%] my-10 px-4 ">
       {/* Navbar */}
       <nav className="flex justify-between sticky top-10 ">
         <a href="/">
@@ -22,7 +22,7 @@ export default function Page() {
       </nav>
 
       {/* ABOUT ME */}
-      <section className="grid h-screen mt-10">
+      <section className="grid h-screen mt-[10%]">
         <div className="grid items-center">
           <div>
             <h1 className="font-semibold text-[#FF0000] text-sm">
@@ -101,8 +101,8 @@ export default function Page() {
       </section>
 
       {/* SKILLS */}
-      <section className="grid h-screen-auto">
-        <div className="grid sm:grid-cols-[70%_30%] sm:max-w-full sm:justify-between">
+      <section className="grid h-screen-auto sm:overflow-hidden">
+        <div className="grid sm:grid-cols-[80%_40%] sm:justify-between">
           <div className="grid">
             <h1 className="font-semibold text-sm mb-2 text-[#aaaa]">SKILLS</h1>
             <h1 className="font-semibold text-2xl text-[#FF0000] sm:text-4xl">
@@ -169,7 +169,7 @@ export default function Page() {
           <div className="flex mt-50 items-center justify-center sm:items-start sm:justify-start sm:mt-0">
             <img
               src="/planet.png"
-              className="rounded-lg shadow-lg w-50 h-auto sm:w-80 lg:w-96"
+              className="rounded-lg shadow-lg w-50 h-auto sm:w-80 lg:w-128"
             />
           </div>
         </div>
@@ -187,7 +187,7 @@ export default function Page() {
       </section>
 
       {/* PROJECTS */}
-      <section className="grid h-screen-auto mb-[60%]">
+      <section className="grid grid-cols h-screen-auto mb-[60%]">
         <div>
           <h1 className="font-semibold text-sm mb-2 text-[#aaaa]">PROJECTS</h1>
           <h1 className="font-semibold text-2xl text-[#FF0000] sm:text-4xl">
@@ -197,58 +197,58 @@ export default function Page() {
             I have worked on several projects that have helped me to improve my
             skills and knowledge.
           </h1>
+        </div>
 
-          <div className="grid space-y-8 mt-10">
-            <div className="grid space-y-4 items-center">
-              <img
-                src="https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=2106&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                className="w-xl h-auto h-max-50 rounded-lg"
-              />
-              <div>
-                <h1 className="font-bold text-lg sm:text-xl">Project 1</h1>
-                <p className="text-[#aaaa]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              </div>
+        <div className="grid grid-cols-1 mt-10 gap-x-8 gap-y-20 sm:grid-cols-2">
+          <div className="space-y-4 items-center">
+            <img
+              src="https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=2106&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              className="w-xl h-auto h-max-50 aspect-3/2 rounded-lg"
+            />
+            <div>
+              <h1 className="font-bold text-lg sm:text-xl">Project 1</h1>
+              <p className="text-[#aaaa]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
             </div>
+          </div>
 
-            <div className="grid space-y-4 items-center">
-              <img
-                src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                className="w-xl h-auto h-max-50 rounded-lg"
-              />
-              <div>
-                <h1 className="font-bold text-lg sm:text-xl">Project 2</h1>
-                <p className="text-[#aaaa]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              </div>
+          <div className="space-y-4 items-center">
+            <img
+              src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              className="w-xl h-auto h-max-50 aspect-3/2 rounded-lg"
+            />
+            <div>
+              <h1 className="font-bold text-lg sm:text-xl">Project 2</h1>
+              <p className="text-[#aaaa]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
             </div>
+          </div>
 
-            <div className="grid space-y-4 items-center">
-              <img
-                src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                className="w-xl h-auto h-max-50 rounded-lg"
-              />
-              <div>
-                <h1 className="font-bold text-lg sm:text-xl">Project 3</h1>
-                <p className="text-[#aaaa]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              </div>
+          <div className="space-y-4 items-center">
+            <img
+              src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              className="w-xl h-auto h-max-50 aspect-3/2 rounded-lg"
+            />
+            <div>
+              <h1 className="font-bold text-lg sm:text-xl">Project 3</h1>
+              <p className="text-[#aaaa]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
             </div>
+          </div>
 
-            <div className="grid space-y-4 items-center">
-              <img
-                src="https://images.unsplash.com/photo-1566837945700-30057527ade0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                className="w-xl h-auto h-max-50 rounded-lg"
-              />
-              <div>
-                <h1 className="font-bold text-lg sm:text-xl">Project 4</h1>
-                <p className="text-[#aaaa]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              </div>
+          <div className="space-y-4 items-center">
+            <img
+              src="https://images.unsplash.com/photo-1566837945700-30057527ade0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              className="w-xl h-auto h-max-50 aspect-3/2 rounded-lg"
+            />
+            <div>
+              <h1 className="font-bold text-lg sm:text-xl">Project 4</h1>
+              <p className="text-[#aaaa]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
             </div>
           </div>
         </div>
