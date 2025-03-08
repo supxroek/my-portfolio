@@ -35,9 +35,9 @@ function page() {
       <div
         className={`fixed inset-0 bg-black opacity-90 transition-transform transform ${
           menuOpen ? "translate-x-0 mr-[8%]" : "translate-x-full"
-        } z-50 rounded-lg ml-[8%] my-6`}
+        } z-50 rounded-lg ml-[8%] my-0`}
       >
-        <div className="flex flex-col items-center justify-center h-full space-y-4 relative">
+        <div className="flex flex-col items-center justify-center h-full space-y-4 relative my-6">
           <button onClick={toggleMenu} className="absolute top-4 right-4">
             <FontAwesomeIcon
               icon={faTimes}

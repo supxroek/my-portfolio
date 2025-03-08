@@ -7,31 +7,34 @@ import SectionDescription from "../../components/animations/SectionDescription";
 function page() {
   const projects = [
     {
-      imgSrc:
-        "https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=2106&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Project 1",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      imgSrc: "/myProject-1.png",
+      title: "Music player app",
+      description:
+        "Music player app built with Java Netbeans. It has a simple and user-friendly interface.",
+      link_url: "https://github.com/supxroek/Java-Desktop-Application",
       delay: 0.6,
     },
     {
-      imgSrc:
-        "https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Project 2",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      imgSrc: "/myProject-3.png",
+      title: "Book a meeting room",
+      description:
+        "A web application that allows users to book meeting rooms. It includes a database connection, API calls, a login system, a registration system, user management, and the ability to add, delete, and edit data. The front end is built with React, Tailwind CSS, and Daisy UI, while the back end utilizes Node.js, Express, and Nodemon.",
+      link_url: "https://github.com/supxroek/Mini-Project",
       delay: 0.8,
     },
     {
-      imgSrc:
-        "https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Project 3",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      imgSrc: "/myProject-4.png",
+      title: "To-do list",
+      description: "A simple to-do list app built with React.",
+      link_url: "https://github.com/supxroek/multi-container-app",
       delay: 1,
     },
     {
-      imgSrc:
-        "https://images.unsplash.com/photo-1566837945700-30057527ade0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Project 4",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      imgSrc: "/myProject-2.png",
+      title: "Packet Tracer and Hardware",
+      description:
+        "Network design on Cisco packet tracer program and hardware.",
+      link_url: "https://github.com/supxroek/Packet-Tracer-and-Hardware",
       delay: 1.2,
     },
   ];
