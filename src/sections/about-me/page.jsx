@@ -62,7 +62,7 @@ function page() {
           <MicroInteraction>
             <div className="mt-8">
               <a href="/resume.pdf" target="_blank">
-                <span className="px-4 py-2 inline-flex border items-center border-[#FF0000] rounded-lg shadow-md bg-transparent hover:bg-[#FF0000] transition duration-700">
+                <span className="px-4 py-2 inline-flex border items-center animate-bounce border-[#FF0000] rounded-lg shadow-md bg-transparent hover:bg-[#FF0000] transition duration-700">
                   View Resume
                   <FontAwesomeIcon
                     icon={faPlay}
