@@ -1,6 +1,16 @@
 "use client";
 
-import { faBars, faCube, faTimes } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faCube,
+  faDiagramProject,
+  faHandPeace,
+  faHeart,
+  faMapPin,
+  faMeteor,
+  faStar,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
@@ -33,7 +43,7 @@ function page() {
       </div>
 
       <div
-        className={`fixed inset-0 bg-black opacity-90 transition-transform transform ${
+        className={`fixed inset-0 bg-[#0f1115] opacity-96 transition-transform transform ${
           menuOpen ? "translate-x-0 mr-[8%]" : "translate-x-full"
         } z-50 rounded-lg ml-[8%] my-0`}
       >
@@ -46,38 +56,62 @@ function page() {
           </button>
           <a
             onClick={() => scrollToSection("aboutme")}
-            className="block px-4 py-2 text-white transition-all transform hover:scale-125 hover:text-2xl hover:opacity-100 opacity-50 hover:font-semibold"
+            className="block px-4 py-2 text-white transition-all transform hover:scale-125 hover:cursor-pointer hover:text-2xl hover:opacity-100 opacity-50 hover:font-semibold"
           >
+            <FontAwesomeIcon
+              icon={faMeteor}
+              className="w-6 h-6 text-white transition-transform transform hover:scale-180"
+            />
             About Me
           </a>
           <a
             onClick={() => scrollToSection("passion")}
-            className="block px-4 py-2 text-white transition-all transform hover:scale-125 hover:text-2xl hover:opacity-100 opacity-50 hover:font-semibold"
+            className="block px-4 py-2 text-white transition-all transform hover:scale-125 hover:cursor-pointer hover:text-2xl hover:opacity-100 opacity-50 hover:font-semibold"
           >
+            <FontAwesomeIcon
+              icon={faHeart}
+              className="w-6 h-6 text-white transition-transform transform hover:scale-180"
+            />
             Passion
           </a>
           <a
             onClick={() => scrollToSection("skills")}
-            className="block px-4 py-2 text-white transition-all transform hover:scale-125 hover:text-2xl hover:opacity-100 opacity-50 hover:font-semibold"
+            className="block px-4 py-2 text-white transition-all transform hover:scale-125 hover:cursor-pointer hover:text-2xl hover:opacity-100 opacity-50 hover:font-semibold"
           >
+            <FontAwesomeIcon
+              icon={faStar}
+              className="w-6 h-6 text-white transition-transform transform hover:scale-180"
+            />
             Skills
           </a>
           <a
             onClick={() => scrollToSection("attention")}
-            className="block px-4 py-2 text-white transition-all transform hover:scale-125 hover:text-2xl hover:opacity-100 opacity-50 hover:font-semibold"
+            className="block px-4 py-2 text-white transition-all transform hover:scale-125 hover:cursor-pointer hover:text-2xl hover:opacity-100 opacity-50 hover:font-semibold"
           >
+            <FontAwesomeIcon
+              icon={faHandPeace}
+              className="w-6 h-6 text-white transition-transform transform hover:scale-180"
+            />
             Attention
           </a>
           <a
             onClick={() => scrollToSection("projects")}
-            className="block px-4 py-2 text-white transition-all transform hover:scale-125 hover:text-2xl hover:opacity-100 opacity-50 hover:font-semibold"
+            className="block px-4 py-2 text-white transition-all transform hover:scale-125 hover:cursor-pointer hover:text-2xl hover:opacity-100 opacity-50 hover:font-semibold"
           >
+            <FontAwesomeIcon
+              icon={faDiagramProject}
+              className="w-6 h-6 text-white transition-transform transform hover:scale-180"
+            />
             Projects
           </a>
           <a
             onClick={() => scrollToSection("contact")}
-            className="block px-4 py-2 text-white transition-all transform hover:scale-125 hover:text-2xl hover:opacity-100 opacity-50 hover:font-semibold"
+            className="block px-4 py-2 text-white transition-all transform hover:scale-125 hover:cursor-pointer hover:text-2xl hover:opacity-100 opacity-50 hover:font-semibold"
           >
+            <FontAwesomeIcon
+              icon={faMapPin}
+              className="w-6 h-6 text-white transition-transform transform hover:scale-180"
+            />
             Contact
           </a>
         </div>
