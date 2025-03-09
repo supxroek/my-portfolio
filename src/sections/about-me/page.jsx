@@ -25,11 +25,13 @@ function page() {
       } else if (text.length === 0 && !isTyping) {
         setTimeout(() => {
           setIsTyping(true);
-          setCurrentText(
-            currentText === "Software Developer"
-              ? "UI/UX Designer"
-              : "Software Developer"
-          );
+          if (currentText === "Software Developer") {
+            setCurrentText("Programmer");
+          } else if (currentText === "Programmer") {
+            setCurrentText("UI/UX Designer");
+          } else if (currentText === "UI/UX Designer") {
+            setCurrentText("Software Developer");
+          }
         }, 3000);
       }
     }, 150);
