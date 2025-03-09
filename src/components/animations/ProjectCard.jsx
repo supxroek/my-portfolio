@@ -12,6 +12,7 @@ const ProjectCard = ({ imgSrc, title, description, link_url, delay }) => (
     <div>
       <a
         href={link_url}
+        target="_blank"
         className="font-bold text-lg hover:text-[#FF0000] sm:text-xl"
       >
         {title}
