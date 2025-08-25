@@ -77,14 +77,12 @@ function page() {
         </div>
       </div>
 
-      <DragAndDrop>
-        <div className="flex items-center justify-center sm:justify-end">
-          <img
-            src="/rocket2.png"
-            className="rounded-lg shadow-lg w-50 h-auto sm:w-80 md:w-96"
-          />
-        </div>
-      </DragAndDrop>
+      <div className="flex items-center justify-center sm:justify-end">
+        <img
+          src="/rocket2.png"
+          className="rounded-lg shadow-lg w-50 h-auto sm:w-80 md:w-96"
+        />
+      </div>
     </section>
   );
 }
