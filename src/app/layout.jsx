@@ -1,5 +1,6 @@
 import "./globals.css";
 import { robotoMono } from "./fonts";
+import Background3D from "@/components/three/Background3D";
 
 export const metadata = {
   title: "Portfolio - Suparoek Manajit",
@@ -9,7 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${robotoMono.className} bg-[#0f1115] text-white`}>
+      <body
+        className={`${robotoMono.className} bg-[#0f1115] text-white relative`}
+      >
+        <Background3D />
         {children}
       </body>
     </html>
