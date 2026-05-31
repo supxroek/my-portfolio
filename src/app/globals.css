@@ -1,79 +1,12 @@
 @import "tailwindcss";
 
-* {
-  cursor: none;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  overflow-x: hidden;
-}
-
 .cursor-blink {
-  display: inline-block;
-  animation: blink 0.8s infinite;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 1;
+    display: inline-block;
+    animation: blink 0.8s infinite;
   }
-
-  50% {
-    opacity: 0;
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
   }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Glassmorphism utility classes */
-.glass {
-  background: rgba(255, 255, 255, 0.05);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.glass-strong {
-  background: rgba(255, 255, 255, 0.1);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Glow effect */
-.glow {
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3),
-    0 0 40px rgba(255, 0, 0, 0.2),
-    0 0 60px rgba(255, 0, 0, 0.1);
-}
-
-.glow-hover:hover {
-  box-shadow: 0 0 30px rgba(255, 0, 0, 0.5),
-    0 0 60px rgba(255, 0, 0, 0.3),
-    0 0 90px rgba(255, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #0f1115;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #FF0000, #FF0088);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #FF0088, #FF00FF);
-}
