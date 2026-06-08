@@ -155,7 +155,7 @@ export function AboutSection() {
                   className="text-xs text-muted-foreground leading-relaxed"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
-                  {desc}
+                  {t(`about.traits.${i}.desc`, { defaultValue: desc })}
                 </div>
               </motion.div>
             ))}
@@ -173,7 +173,7 @@ export function AboutSection() {
           className="text-xs text-muted-foreground uppercase tracking-widest"
           style={{ fontFamily: "'JetBrains Mono', monospace" }}
         >
-          scroll
+          {t("common.scroll")}
         </span>
         <motion.div
           animate={{ y: [0, 8, 0] }}

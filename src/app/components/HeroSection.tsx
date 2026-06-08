@@ -282,7 +282,7 @@ export function HeroSection() {
           className="text-xs text-muted-foreground uppercase tracking-widest"
           style={{ fontFamily: "'JetBrains Mono', monospace" }}
         >
-          scroll
+          {t("common.scroll")}
         </span>
         <motion.div
           animate={{ y: [0, 8, 0] }}

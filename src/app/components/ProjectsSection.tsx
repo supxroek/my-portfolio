@@ -87,6 +87,7 @@ function ProjectCard({
 }) {
   const [hovered, setHovered] = useState(false);
   const { t } = useTranslation();
+  const statusKey = project.status.replace(/\s+/g, "_");
 
   return (
     <motion.div
@@ -144,7 +145,7 @@ function ProjectCard({
                 backdropFilter: "blur(4px)",
               }}
             >
-              Featured
+              {t("projects.badges.featured")}
             </span>
           )}
           <span
@@ -160,7 +161,9 @@ function ProjectCard({
               backdropFilter: "blur(4px)",
             }}
           >
-            {project.status}
+            {t(`projects.status.${statusKey}`, {
+              defaultValue: project.status,
+            })}
           </span>
         </div>
         {/* links over image */}
@@ -204,7 +207,7 @@ function ProjectCard({
                 e.currentTarget.style.color = "#c0c0c0";
                 e.currentTarget.style.background = "rgba(0,0,0,0.6)";
               }}
-              aria-label="Live demo"
+              aria-label={t("projects.liveDemo", { defaultValue: "Live demo" })}
             >
               <ExternalLink size={13} />
             </a>
@@ -344,7 +347,7 @@ export function ProjectsSection() {
               e.currentTarget.style.color = "#6b6b6b";
             }}
           >
-            See more on GitHub <ArrowRight size={14} />
+            {t("projects.seeMoreGitHub")} <ArrowRight size={14} />
           </a>
         </motion.div>
       </div>

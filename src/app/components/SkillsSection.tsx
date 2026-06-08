@@ -267,7 +267,9 @@ export function SkillsSection() {
                 color: "#e5173f",
               }}
             >
-              {visibleCount < filtered.length ? "Show more" : "Show less"}
+              {visibleCount < filtered.length
+                ? t("skills.showMore")
+                : t("skills.showLess")}
             </button>
           </div>
         )}

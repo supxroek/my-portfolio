@@ -9,6 +9,20 @@ const resources = {
         p2: "My stack spans from low-level C/C++ to modern React applications. I enjoy working across the full spectrum — whether it's crafting pixel-perfect UIs or architecting backend systems with Node.js.",
         p3: "Outside of work I'm constantly experimenting with new tools, contributing to projects, and trying to push the boundaries of what a great user experience can look like.",
         downloadCV: "Download CV",
+        traits: [
+          {
+            desc: "Readable, maintainable, and scalable codebases",
+          },
+          {
+            desc: "Thoughtful architecture for complex applications",
+          },
+          {
+            desc: "Fast load times and smooth interactions matter",
+          },
+          {
+            desc: "Comfortable from database to pixel-perfect UI",
+          },
+        ],
       },
       hero: {
         description:
@@ -78,10 +92,25 @@ const resources = {
               "A cross-platform mobile app built with Flutter and Dart. Integrates Firebase for authentication and real-time database, offering smooth animations and a native-feeling UI across iOS and Android.",
           },
         ],
+        badges: {
+          featured: "Featured",
+        },
+        status: {
+          Completed: "Completed",
+          In_Progress: "In Progress",
+          Archived: "Archived",
+        },
+        seeMoreGitHub: "See more on GitHub",
+        liveDemo: "Live demo",
       },
       skills: {
         closing:
           "I like to take responsibility to craft aesthetic user experiences using modern frontend architecture. Always learning, always building.",
+        showMore: "Show more",
+        showLess: "Show less",
+      },
+      common: {
+        scroll: "scroll",
       },
     },
   },
@@ -92,6 +121,20 @@ const resources = {
         p2: "สแต็กของฉันครอบคลุมตั้งแต่ระดับล่างอย่าง C/C++ จนถึงแอป React สมัยใหม่ ฉันชอบทำงานทั้งในส่วนอินเทอร์เฟซที่ละเอียดและสถาปัตยกรรมระบบแบ็กเอนด์ด้วย Node.js",
         p3: "นอกงานฉันมักทดลองเครื่องมือใหม่ๆ มีส่วนร่วมในโปรเจกต์ต่างๆ และพยายามผลักดันขอบเขตของประสบการณ์ผู้ใช้ที่ยอดเยี่ยม",
         downloadCV: "ดาวน์โหลด CV",
+        traits: [
+          {
+            desc: "โค้ดที่อ่านง่าย ดูแลรักษาได้ และปรับขยายได้",
+          },
+          {
+            desc: "ออกแบบสถาปัตยกรรมอย่างรอบคอบสำหรับแอปที่ซับซ้อน",
+          },
+          {
+            desc: "เวลาโหลดรวดเร็วและอินเทอร์แอ็กชันที่ลื่นไหลมีความสำคัญ",
+          },
+          {
+            desc: "คล่องทั้งฐานข้อมูลไปจนถึง UI ที่พิถีพิถัน",
+          },
+        ],
       },
       hero: {
         description:
@@ -160,10 +203,25 @@ const resources = {
               "แอปมือถือข้ามแพลตฟอร์มพัฒนาด้วย Flutter และ Dart เชื่อมต่อ Firebase สำหรับการยืนยันตัวตนและฐานข้อมูลเรียลไทม์ มีแอนิเมชันที่นุ่มนวลและประสบการณ์เหมือนเนทีฟ",
           },
         ],
+        badges: {
+          featured: "ที่โดดเด่น",
+        },
+        status: {
+          Completed: "เสร็จแล้ว",
+          In_Progress: "กำลังดำเนินการ",
+          Archived: "เก็บถาวร",
+        },
+        seeMoreGitHub: "ดูเพิ่มเติมที่ GitHub",
+        liveDemo: "แสดงตัวอย่าง",
       },
       skills: {
         closing:
           "ฉันรับผิดชอบในการออกแบบประสบการณ์ผู้ใช้ที่สวยงามโดยใช้สถาปัตยกรรมเฟร้อนท์เอนด์สมัยใหม่ เรียนรู้และลงมือสร้างอยู่เสมอ",
+        showMore: "ดูเพิ่มเติม",
+        showLess: "ย่อกลับ",
+      },
+      common: {
+        scroll: "เลื่อน",
       },
     },
   },
