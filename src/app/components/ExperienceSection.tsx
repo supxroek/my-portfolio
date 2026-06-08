@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { useInView } from "../hooks/useInView";
 import { GraduationCap, Briefcase, Award } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 type TimelineItem = {
   type: "education" | "work" | "award";
@@ -21,7 +22,12 @@ const timeline: TimelineItem[] = [
     location: "Thailand",
     description:
       "Studying Computer Science with a focus on software engineering, data structures, algorithms, and web development. Maintaining active involvement in tech clubs and project-based learning.",
-    tags: ["CS Fundamentals", "Algorithms", "Software Engineering", "Databases"],
+    tags: [
+      "CS Fundamentals",
+      "Algorithms",
+      "Software Engineering",
+      "Databases",
+    ],
   },
   {
     type: "work",
@@ -69,11 +75,15 @@ const colorMap = {
 
 export function ExperienceSection() {
   const { ref, inView } = useInView();
+  const { t } = useTranslation();
 
   return (
     <section id="experience" ref={ref} className="relative py-24 lg:py-32">
       <div className="max-w-6xl mx-auto px-6 mb-2">
-        <div className="h-px" style={{ background: "rgba(255,255,255,0.06)" }} />
+        <div
+          className="h-px"
+          style={{ background: "rgba(255,255,255,0.06)" }}
+        />
       </div>
 
       <div className="max-w-6xl mx-auto px-6 pt-16">
@@ -83,7 +93,13 @@ export function ExperienceSection() {
           transition={{ duration: 0.5 }}
           className="mb-4"
         >
-          <span className="text-xs uppercase tracking-[0.25em]" style={{ fontFamily: "'JetBrains Mono', monospace", color: "#e5173f" }}>
+          <span
+            className="text-xs uppercase tracking-[0.25em]"
+            style={{
+              fontFamily: "'JetBrains Mono', monospace",
+              color: "#e5173f",
+            }}
+          >
             — Experience
           </span>
         </motion.div>
@@ -93,7 +109,12 @@ export function ExperienceSection() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-foreground leading-tight mb-16"
-          style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 700, letterSpacing: "-0.02em" }}
+          style={{
+            fontFamily: "'JetBrains Mono', monospace",
+            fontSize: "clamp(1.8rem, 4vw, 3rem)",
+            fontWeight: 700,
+            letterSpacing: "-0.02em",
+          }}
         >
           Education &amp; <span style={{ color: "#e5173f" }}>Journey</span>
         </motion.h2>
@@ -102,7 +123,10 @@ export function ExperienceSection() {
           {/* vertical line */}
           <div
             className="absolute left-[19px] lg:left-1/2 top-0 bottom-0 w-px"
-            style={{ background: "rgba(255,255,255,0.07)", transform: "translateX(-0.5px)" }}
+            style={{
+              background: "rgba(255,255,255,0.07)",
+              transform: "translateX(-0.5px)",
+            }}
           />
 
           <div className="space-y-10">
@@ -120,21 +144,30 @@ export function ExperienceSection() {
                   className={`relative flex flex-col lg:flex-row gap-8 ${isLeft ? "lg:flex-row" : "lg:flex-row-reverse"}`}
                 >
                   {/* card */}
-                  <div className={`lg:w-[calc(50%-2.5rem)] ml-12 lg:ml-0 ${isLeft ? "lg:text-right" : ""}`}>
+                  <div
+                    className={`lg:w-[calc(50%-2.5rem)] ml-12 lg:ml-0 ${isLeft ? "lg:text-right" : ""}`}
+                  >
                     <div
                       className="p-6 rounded-sm border transition-all duration-300 group cursor-default"
-                      style={{ borderColor: "rgba(255,255,255,0.08)", background: "rgba(255,255,255,0.02)" }}
-                      onMouseEnter={e => {
+                      style={{
+                        borderColor: "rgba(255,255,255,0.08)",
+                        background: "rgba(255,255,255,0.02)",
+                      }}
+                      onMouseEnter={(e) => {
                         e.currentTarget.style.borderColor = `${accent}44`;
                         e.currentTarget.style.background = `${accent}08`;
                       }}
-                      onMouseLeave={e => {
-                        e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)";
-                        e.currentTarget.style.background = "rgba(255,255,255,0.02)";
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.borderColor =
+                          "rgba(255,255,255,0.08)";
+                        e.currentTarget.style.background =
+                          "rgba(255,255,255,0.02)";
                       }}
                     >
                       {/* top bar */}
-                      <div className={`flex items-center gap-2 mb-3 flex-wrap ${isLeft ? "lg:justify-end" : ""}`}>
+                      <div
+                        className={`flex items-center gap-2 mb-3 flex-wrap ${isLeft ? "lg:justify-end" : ""}`}
+                      >
                         <span
                           className="text-xs px-2 py-0.5 rounded-sm"
                           style={{
@@ -144,7 +177,8 @@ export function ExperienceSection() {
                             letterSpacing: "0.05em",
                           }}
                         >
-                          {item.type.charAt(0).toUpperCase() + item.type.slice(1)}
+                          {item.type.charAt(0).toUpperCase() +
+                            item.type.slice(1)}
                         </span>
                         <span
                           className="text-xs text-muted-foreground"
@@ -156,15 +190,31 @@ export function ExperienceSection() {
 
                       <h3
                         className="text-foreground mb-1"
-                        style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.95rem", fontWeight: 700 }}
+                        style={{
+                          fontFamily: "'JetBrains Mono', monospace",
+                          fontSize: "0.95rem",
+                          fontWeight: 700,
+                        }}
                       >
                         {item.title}
                       </h3>
-                      <div className={`flex items-center gap-2 mb-4 flex-wrap ${isLeft ? "lg:justify-end" : ""}`}>
-                        <span className="text-sm" style={{ fontFamily: "'Inter', sans-serif", color: accent, fontWeight: 500 }}>
+                      <div
+                        className={`flex items-center gap-2 mb-4 flex-wrap ${isLeft ? "lg:justify-end" : ""}`}
+                      >
+                        <span
+                          className="text-sm"
+                          style={{
+                            fontFamily: "'Inter', sans-serif",
+                            color: accent,
+                            fontWeight: 500,
+                          }}
+                        >
                           {item.org}
                         </span>
-                        <span className="text-xs text-muted-foreground" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+                        <span
+                          className="text-xs text-muted-foreground"
+                          style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                        >
                           · {item.location}
                         </span>
                       </div>
@@ -172,10 +222,14 @@ export function ExperienceSection() {
                         className="text-muted-foreground text-sm leading-relaxed mb-4"
                         style={{ fontFamily: "'Inter', sans-serif" }}
                       >
-                        {item.description}
+                        {t(`experience.timeline.${i}.description`, {
+                          defaultValue: item.description,
+                        })}
                       </p>
-                      <div className={`flex flex-wrap gap-2 ${isLeft ? "lg:justify-end" : ""}`}>
-                        {item.tags.map(tag => (
+                      <div
+                        className={`flex flex-wrap gap-2 ${isLeft ? "lg:justify-end" : ""}`}
+                      >
+                        {item.tags.map((tag) => (
                           <span
                             key={tag}
                             className="text-xs px-2 py-0.5 rounded-sm"
