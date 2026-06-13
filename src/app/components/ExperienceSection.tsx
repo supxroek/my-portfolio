@@ -4,7 +4,7 @@ import { GraduationCap, Briefcase, Award } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 type TimelineItem = {
-  type: "education" | "work" | "award";
+  type: "education" | "work" | "award" | "intern";
   title: string;
   org: string;
   period: string;
@@ -15,61 +15,102 @@ type TimelineItem = {
 
 const timeline: TimelineItem[] = [
   {
-    type: "education",
-    title: "Bachelor of Science in Computer Science",
-    org: "Rajamangala University of Technology",
-    period: "2022 — Present",
+    type: "intern",
+    title: "Timesnow (Attendance & Shift Scheduling)",
+    org: "Inverz Solutions Co., Ltd.",
+    period: "Jan 2026 — Mar 2026",
     location: "Thailand",
     description:
-      "Studying Computer Science with a focus on software engineering, data structures, algorithms, and web development. Maintaining active involvement in tech clubs and project-based learning.",
+      "Intern — Implemented bulk shift updates and pagination for employee roster management. Created cross-database SQL reports with LeaveHub to automate monthly attendance. Built offsite check-in using `navigator.geolocation` with middleware API-key validation. Troubleshot LINE Beacon webhooks and supported Rich Menu automated check-ins.",
     tags: [
-      "CS Fundamentals",
-      "Algorithms",
-      "Software Engineering",
-      "Databases",
+      "React",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "SQL",
+      "Node.js",
+      "MySQL",
+      "Web Application - CMS",
+      "LIFF Application",
+      "Geolocation",
+      "Middleware",
     ],
   },
   {
-    type: "work",
-    title: "Frontend Developer Intern",
-    org: "Tech Company",
-    period: "Jun 2024 — Aug 2024",
-    location: "Bangkok, Thailand",
-    description:
-      "Developed and maintained UI components using React and Tailwind CSS. Collaborated with designers to implement pixel-perfect interfaces and improved page load performance by 30%.",
-    tags: ["React", "Tailwind CSS", "TypeScript", "REST API"],
-  },
-  {
-    type: "award",
-    title: "Hackathon — Top 3 Finalist",
-    org: "National Student Coding Competition",
-    period: "2023",
+    type: "intern",
+    title: "LeaveHub (Intelligent Leave Management)",
+    org: "Inverz Solutions Co., Ltd.",
+    period: "Sep 2025 — Dec 2025",
     location: "Thailand",
     description:
-      "Built a real-time collaborative web app in 24 hours as part of a 3-person team. Placed in the top 3 out of 60+ participating teams.",
-    tags: ["React", "Node.js", "WebSocket", "24h Sprint"],
+      "Intern — Built leave-request and holiday-swap flows on LINE LIFF. Refactored backend into service/handler/controller layers for better maintainability. Integrated automated notifications via Gmail and LINE Messaging API (Flex Messages). Deployed LIFF on Firebase Hosting and implemented PII masking and timezone normalization.",
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "SQL",
+      "Node.js",
+      "MySQL",
+      "Firebase",
+      "LIFF Application",
+      "LINE Messaging API",
+    ],
+  },
+  {
+    type: "intern",
+    title: "Qmanage (Queue & Personnel Management)",
+    org: "Inverz Solutions Co., Ltd.",
+    period: "Jun 2025 — Sep 2025",
+    location: "Thailand",
+    description:
+      "Intern — Maintained an inherited CMS codebase and supported queue & personnel workflows. Developed Node.js REST APIs, CMS features for employee data and password recovery, and PowerShell deployment scripts. Optimized React rendering (`useMemo`, `useCallback`) and SQL queries for high-volume queue data. Integrated JWT/LINE token auth and LINE Flex Message notifications; hosted services on Google Cloud Run and Firebase Functions.",
+    tags: [
+      "React",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "SQL",
+      "Web Application - CMS",
+      "Node.js",
+      "MySQL",
+      "JWT",
+      "Google Cloud Run",
+      "Firebase",
+      "LIFF Application",
+    ],
   },
   {
     type: "education",
-    title: "High School — Science & Math Track",
-    org: "Suansunandha Rajabhat University Demonstration School",
-    period: "2019 — 2022",
-    location: "Bangkok, Thailand",
+    title: "B.Eng., Computer Engineering & AI",
+    org: "Mahanakorn University of Technology",
+    period: "2022 — 2026",
+    location: "Thailand",
     description:
-      "Graduated with honors in the science-math program. First exposure to programming through C and Java courses, sparking a passion for software development.",
-    tags: ["C", "Java", "Mathematics", "Physics"],
+      "B.Eng. in Computer Engineering and Artificial Intelligence — GPA: 3.02",
+    tags: ["Computer Engineering", "Artificial Intelligence", "GPA 3.02"],
+  },
+  {
+    type: "education",
+    title: "Science & Mathematics",
+    org: "Uttayansuksa Krabi School",
+    period: "2019 — 2021",
+    location: "Thailand",
+    description: "Science and Mathematics program — GPA: 3.34",
+    tags: ["Science & Math", "GPA 3.34"],
   },
 ];
 
 const iconMap = {
   education: GraduationCap,
   work: Briefcase,
+  intern: Briefcase,
   award: Award,
 };
 
 const colorMap = {
   education: "#6C63FF",
   work: "#e5173f",
+  intern: "#e5173f",
   award: "#F6B000",
 };
 
@@ -116,7 +157,7 @@ export function ExperienceSection() {
             letterSpacing: "-0.02em",
           }}
         >
-          Education &amp; <span style={{ color: "#e5173f" }}>Journey</span>
+          Experience &amp; <span style={{ color: "#e5173f" }}>Education</span>
         </motion.h2>
 
         <div className="relative">
