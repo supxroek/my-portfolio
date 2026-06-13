@@ -64,8 +64,10 @@ export function AboutSection() {
 
             <div className="flex items-center gap-3 mt-8">
               <a
-                href="/src/assets/RESUME-INTERNSHIP.pdf"
+                href="/RESUME-INTERNSHIP.pdf"
                 download="RESUME-INTERNSHIP.pdf"
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-sm text-sm border transition-all duration-200"
                 style={{
                   fontFamily: "'JetBrains Mono', monospace",
