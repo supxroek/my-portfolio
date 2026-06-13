@@ -259,11 +259,10 @@ export function SkillsSection() {
           <div className="mt-4 flex justify-center">
             <button
               onClick={handleMore}
-              className="px-5 py-2 text-sm rounded-sm border transition-all duration-200"
+              className="px-5 py-2 text-sm rounded-sm border transition-all duration-200 cursor-pointer hover:bg-white/5"
               style={{
                 fontFamily: "'JetBrains Mono', monospace",
                 borderColor: "rgba(255,255,255,0.08)",
-                background: "transparent",
                 color: "#e5173f",
               }}
             >

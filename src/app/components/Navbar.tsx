@@ -109,7 +109,7 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-2">
             <button
               onClick={() => changeLanguage("th")}
-              className="text-xs uppercase tracking-widest px-2 py-1 rounded-sm transition-colors duration-200 cursor-pointer"
+              className="text-xs uppercase tracking-widest px-2 py-1 rounded-sm transition-colors duration-200 cursor-pointer hover:bg-white/5"
               style={{
                 fontFamily: "'JetBrains Mono', monospace",
                 border:
@@ -123,7 +123,7 @@ export function Navbar() {
             </button>
             <button
               onClick={() => changeLanguage("en")}
-              className="text-xs uppercase tracking-widest px-2 py-1 rounded-sm transition-colors duration-200 cursor-pointer"
+              className="text-xs uppercase tracking-widest px-2 py-1 rounded-sm transition-colors duration-200 cursor-pointer hover:bg-white/5"
               style={{
                 fontFamily: "'JetBrains Mono', monospace",
                 border:
@@ -173,7 +173,7 @@ export function Navbar() {
                     setActive(label);
                     setMenuOpen(false);
                   }}
-                  className="text-sm py-2 border-b"
+                  className="text-sm py-2 border-b hover:bg-white/5 transition-colors duration-200"
                   style={{
                     fontFamily: "'JetBrains Mono', monospace",
                     color: active === label ? "#e5173f" : "#6b6b6b",
@@ -189,7 +189,7 @@ export function Navbar() {
                     changeLanguage("th");
                     setMenuOpen(false);
                   }}
-                  className="px-3 py-2 rounded-sm text-sm"
+                  className="px-3 py-2 rounded-sm text-sm hover:bg-white/5 transition-colors duration-200"
                   style={{
                     fontFamily: "'JetBrains Mono', monospace",
                     border:
@@ -206,7 +206,7 @@ export function Navbar() {
                     changeLanguage("en");
                     setMenuOpen(false);
                   }}
-                  className="px-3 py-2 rounded-sm text-sm"
+                  className="px-3 py-2 rounded-sm text-sm hover:bg-white/5 transition-colors duration-200"
                   style={{
                     fontFamily: "'JetBrains Mono', monospace",
                     border:
