@@ -52,24 +52,20 @@ const resources = {
         },
       },
       experience: {
-        timeline: [
-          {
+        timeline: {
+          timesnow: {
             description:
-              "Software Developer Intern at Inverz Solutions Co., Ltd. I supported multiple web and LIFF-based projects, researched requirements, and helped maintain and extend inherited codebases across frontend, backend, and database layers.",
+              "Developed bulk shift updates and pagination for employee roster management. Built cross-database SQL reports with LeaveHub to automate monthly attendance. Implemented offsite check-in with navigator.geolocation, secured routes with middleware API-key validation, and troubleshot LINE Beacon webhooks and Rich Menu check-in flows.",
           },
-          {
+          leavehub: {
             description:
-              "Qmanage: Maintained an inherited codebase, developed RESTful APIs with Node.js, built CMS features for employee data and password recovery, optimized React rendering and Oracle SQL queries, and supported automated deployment and notification workflows.",
+              "Built leave-request and holiday-swap flows on LINE LIFF. Refactored the backend into service, handler, and controller layers, integrated automated notifications through Gmail Service and LINE Messaging API (Flex Messages), deployed the LIFF app on Firebase Hosting, and handled PII masking with timezone normalization.",
           },
-          {
+          qmanage: {
             description:
-              "LeaveHub: Built leave request and holiday swap features on LINE LIFF, refactored backend architecture into service, handler, and controller layers, resolved timezone issues, applied data masking for sensitive information, and integrated approval notifications via email and LINE Flex Message.",
+              "Maintained an inherited CMS codebase and supported queue and personnel workflows. Developed Node.js REST APIs, built employee-data and password-recovery features, optimized React rendering with useMemo and useCallback, and tuned SQL queries for high-volume queue data. Integrated JWT and LINE token authentication, LINE Flex Message notifications, PowerShell deployment scripts, and hosting on Google Cloud Run and Firebase Functions.",
           },
-          {
-            description:
-              "Timesnow: Implemented bulk update and pagination features for shift management, wrote cross-database SQL queries with LeaveHub, developed offsite check-in using geolocation APIs, secured endpoints with middleware validation, and troubleshot LINE Beacon webhook events.",
-          },
-        ],
+        },
       },
       projects: {
         intro:
@@ -165,24 +161,20 @@ const resources = {
         },
       },
       experience: {
-        timeline: [
-          {
+        timeline: {
+          timesnow: {
             description:
-              "นักพัฒนาซอฟต์แวร์ฝึกงานที่ Inverz Solutions Co., Ltd. สนับสนุนหลายโปรเจกต์ทั้งเว็บและระบบ LIFF ค้นคว้าความต้องการของงาน และช่วยดูแลต่อยอดโค้ดเดิมในส่วน frontend, backend และฐานข้อมูล",
+              "พัฒนาฟีเจอร์ bulk shift updates และ pagination สำหรับงานจัดการพนักงานและกะงาน เชื่อมรายงาน SQL ข้ามฐานข้อมูลร่วมกับ LeaveHub เพื่อสรุปเวลาทำงานรายเดือน พัฒนา offsite check-in ด้วย navigator.geolocation พร้อม middleware ตรวจสอบ API key และแก้ปัญหา LINE Beacon webhook กับ Rich Menu check-in flows",
           },
-          {
+          leavehub: {
             description:
-              "Qmanage: ดูแลและต่อยอดซอร์สโค้ดเดิม พัฒนา RESTful API ด้วย Node.js สร้างฟีเจอร์ CMS สำหรับข้อมูลพนักงานและการกู้คืนรหัสผ่าน ปรับปรุงการเรนเดอร์ของ React และคำสั่ง SQL บน Oracle Database พร้อมสนับสนุนระบบ Deploy และการแจ้งเตือนอัตโนมัติ",
+              "พัฒนาฟังก์ชันยื่นคำขอลางานและขอสลับวันหยุดบน LINE LIFF ปรับโครงสร้าง backend เป็น service, handler และ controller เชื่อมระบบแจ้งเตือนอัตโนมัติผ่าน Gmail Service และ LINE Messaging API (Flex Messages) deploy LIFF บน Firebase Hosting และจัดการ PII masking ร่วมกับ timezone normalization",
           },
-          {
+          qmanage: {
             description:
-              "LeaveHub: พัฒนาฟังก์ชันยื่นคำขอลางานและขอสลับวันหยุดบน LINE LIFF ปรับโครงสร้างโค้ดหลังบ้านเป็น Service, Handler และ Controller แก้ไขปัญหา Timezone ใช้ Data Masking เพื่อปกป้องข้อมูลสำคัญ และเชื่อมต่อการแจ้งเตือนผลอนุมัติผ่านอีเมลและ LINE Flex Message",
+              "ดูแลซอร์สโค้ด CMS เดิมและต่อยอดงานจัดการคิวและพนักงาน พัฒนา Node.js REST API ฟีเจอร์ข้อมูลพนักงานและกู้คืนรหัสผ่าน ปรับ React rendering ด้วย useMemo และ useCallback รวมถึงปรับ SQL ให้รองรับข้อมูลคิวจำนวนมาก เชื่อม JWT และ LINE token สำหรับการยืนยันตัวตน พร้อม LINE Flex Message, PowerShell deployment scripts, Google Cloud Run และ Firebase Functions",
           },
-          {
-            description:
-              "Timesnow: พัฒนาฟีเจอร์ Bulk Update และ Pagination สำหรับจัดการกะงาน เขียนคำสั่ง SQL ข้ามฐานข้อมูลร่วมกับ LeaveHub พัฒนาฟังก์ชันเช็คอินนอกสถานที่ด้วย Geolocation API เสริมความปลอดภัยของเส้นทางข้อมูลด้วย Middleware Validation และตรวจสอบปัญหา LINE Beacon Webhook",
-          },
-        ],
+        },
       },
       projects: {
         intro: "ตัวอย่างโปรเจกต์ที่ช่วยพัฒนาทักษะและนำซอฟต์แวร์ออกใช้งานจริง",

@@ -4,6 +4,7 @@ import { GraduationCap, Briefcase, Award } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 type TimelineItem = {
+  key?: "timesnow" | "leavehub" | "qmanage";
   type: "education" | "work" | "award" | "intern";
   title: string;
   org: string;
@@ -15,13 +16,14 @@ type TimelineItem = {
 
 const timeline: TimelineItem[] = [
   {
+    key: "timesnow",
     type: "intern",
-    title: "Timesnow (Attendance & Shift Scheduling)",
+    title: "Timesnow — Attendance & Roster Management System",
     org: "Inverz Solutions Co., Ltd.",
     period: "Jan 2026 — Mar 2026",
     location: "Thailand",
     description:
-      "Intern — Implemented bulk shift updates and pagination for employee roster management. Created cross-database SQL reports with LeaveHub to automate monthly attendance. Built offsite check-in using `navigator.geolocation` with middleware API-key validation. Troubleshot LINE Beacon webhooks and supported Rich Menu automated check-ins.",
+      "Intern — Developed bulk shift updates and pagination for employee roster management. Built cross-database SQL reports with LeaveHub to automate monthly attendance. Implemented offsite check-in with `navigator.geolocation`, secured routes with middleware API-key validation, and troubleshot LINE Beacon webhooks and Rich Menu check-in flows.",
     tags: [
       "React",
       "HTML",
@@ -30,20 +32,22 @@ const timeline: TimelineItem[] = [
       "SQL",
       "Node.js",
       "MySQL",
-      "Web Application - CMS",
+      "Web Application (CMS)",
       "LIFF Application",
       "Geolocation",
+      "API Key Middleware",
       "Middleware",
     ],
   },
   {
+    key: "leavehub",
     type: "intern",
-    title: "LeaveHub (Intelligent Leave Management)",
+    title: "LeaveHub — Smart Leave Management System",
     org: "Inverz Solutions Co., Ltd.",
     period: "Sep 2025 — Dec 2025",
     location: "Thailand",
     description:
-      "Intern — Built leave-request and holiday-swap flows on LINE LIFF. Refactored backend into service/handler/controller layers for better maintainability. Integrated automated notifications via Gmail and LINE Messaging API (Flex Messages). Deployed LIFF on Firebase Hosting and implemented PII masking and timezone normalization.",
+      "Intern — Built leave-request and holiday-swap flows on LINE LIFF. Refactored the backend into service, handler, and controller layers. Integrated automated notifications through Gmail Service and LINE Messaging API (Flex Messages), deployed the LIFF app on Firebase Hosting, and handled PII masking with timezone normalization.",
     tags: [
       "HTML",
       "CSS",
@@ -54,29 +58,36 @@ const timeline: TimelineItem[] = [
       "Firebase",
       "LIFF Application",
       "LINE Messaging API",
+      "Gmail Service",
+      "PII Masking",
     ],
   },
   {
+    key: "qmanage",
     type: "intern",
-    title: "Qmanage (Queue & Personnel Management)",
+    title: "Qmanage — Queue Management System",
     org: "Inverz Solutions Co., Ltd.",
     period: "Jun 2025 — Sep 2025",
     location: "Thailand",
     description:
-      "Intern — Maintained an inherited CMS codebase and supported queue & personnel workflows. Developed Node.js REST APIs, CMS features for employee data and password recovery, and PowerShell deployment scripts. Optimized React rendering (`useMemo`, `useCallback`) and SQL queries for high-volume queue data. Integrated JWT/LINE token auth and LINE Flex Message notifications; hosted services on Google Cloud Run and Firebase Functions.",
+      "Intern — Maintained an inherited CMS codebase and supported queue and personnel workflows. Developed Node.js REST APIs, built employee-data and password-recovery features, optimized React rendering with `useMemo` and `useCallback`, and tuned SQL queries for high-volume queue data. Integrated JWT and LINE token authentication, LINE Flex Message notifications, PowerShell deployment scripts, and hosting on Google Cloud Run and Firebase Functions.",
     tags: [
       "React",
       "HTML",
       "CSS",
       "JavaScript",
       "SQL",
-      "Web Application - CMS",
+      "Web Application (CMS)",
       "Node.js",
       "MySQL",
       "JWT",
+      "LINE Token",
+      "LINE Messaging API",
       "Google Cloud Run",
       "Firebase",
       "LIFF Application",
+      "i18next",
+      "PowerShell",
     ],
   },
   {
@@ -263,7 +274,7 @@ export function ExperienceSection() {
                         className="text-muted-foreground text-sm leading-relaxed mb-4"
                         style={{ fontFamily: "'Inter', sans-serif" }}
                       >
-                        {t(`experience.timeline.${i}.description`, {
+                        {t(`experience.timeline.${item.key}.description`, {
                           defaultValue: item.description,
                         })}
                       </p>
