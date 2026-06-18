@@ -6,9 +6,18 @@ Modern portfolio website for Suparoek Manajit, built as a clean single-page expe
 
 The screenshots below show the main sections of the site. If you want to add a GIF demo later, place it next to the screenshots and reference it in the same section.
 
-| Home                                                                         | About                                                                          | Skills                                                                         | Experience                                                                      | Projects                                                                         | Contact                                                                         |
-| ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| <img src="/public/01.png" alt="Home section" width="240" /> | <img src="/public/02.png" alt="About section" width="240" /> | <img src="/public/03.png" alt="Skills section" width="240" /> | <img src="/public/04.png" alt="Experience section" width="240" /> | <img src="/public/05.png" alt="Projects section" width="240" /> | <img src="/public/06.png" alt="Contact section" width="240" width="240" /> |
+<table>
+  <tr>
+    <td><img src="./public/01.png" alt="Home section" width="300" /></td>
+    <td><img src="./public/02.png" alt="About section" width="300" /></td>
+    <td><img src="./public/03.png" alt="Skills section" width="300" /></td>
+  </tr>
+  <tr>
+    <td><img src="./public/04.png" alt="Experience section" width="300" /></td>
+    <td><img src="./public/05.png" alt="Projects section" width="300" /></td>
+    <td><img src="./public/06.png" alt="Contact section" width="300" /></td>
+  </tr>
+</table>
 
 ## Highlights
 
