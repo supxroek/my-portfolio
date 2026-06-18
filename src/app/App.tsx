@@ -9,7 +9,7 @@ import { ContactSection } from "./components/ContactSection";
 // Import Vercel Analytics
 import { Analytics } from "@vercel/analytics/react";
 // Import Vercel Speed Insights
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 export default function App() {
   return (
